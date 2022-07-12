@@ -1,0 +1,49 @@
+---
+title: 'Cournot Model'
+date: '2022-7-5'
+tags: ['game', 'thoery']
+draft: false
+summary: 'Analyzing Cournot Model'
+---
+
+- In this article, we are going to look at cournot models, where firms compete in an oligopoly.
+
+## Modeling the situaiton
+
+- Imagine that we have two firms producing homogeneous products.
+- Each firm can choose it's quantity, $$q_i \in [0, \infty), i = 1, 2$$
+- Each unit of production, the firm has to pay c, the production cost. Assume the production cost remains constant.
+- The price is determined by the market, by the formula below
+  $$p(Q) = a - Q$$
+- Note that the price decreases as quantity increases. Q indicates the total amout of quantity.
+- Each firm wants to maximize it's own profit.
+
+## Normal form of Cournot Model
+
+- for those who do not know normal form, it's just the matematical descripion of player's options and utility function (the payoff).
+- $$n=2$$
+- $$S_i = [0, \infty), i = 1, 2$$
+- $$u_i(q_i, q_j) = q_i (a - q_i-q_j) - cq_i$$
+
+## Finding the best response function
+
+- Let us be in the side of firm 1. We want to maximize our profit, by altering our production.
+- Note that our utility function,
+  $$u_1(q_1, q_2) = q_1(a - q_1 - q_2) - cq_1$$
+- is a parabola upside down, in respect to $$q_1$$
+- Thus, we take the derivative of our utility function in respect to our quantity.
+  $$\frac{\partial u_1}{\partial q_1} = a - c - q_2 - 2q_1 = 0$$
+- Thus, our best response is,
+  $$q^*_1 = \frac{a - c- q_2}{2} $$
+- Note that the situation is symmetric, we also have our best response function for firm 2,
+  $$q^*_2 = \frac{a - c- q_1}{2} $$
+
+## Finding Nash equilibrium
+
+- Recall that in nash equilibrium, both firms would have to have no incentive to unilaterally devicate from current strategy profile.
+- That means, both firms are best responding to each other.
+- Thus, both equations must hold.
+  $$q^*_1 = \frac{a - c- q^*_2}{2}$$
+  $$q^*_2 = \frac{a - c- q^*_2}{2}$$
+- Solving this equation, we obtain the nash equilibrium, which is,
+  $$q^*_1 = q^*_2 = \frac{a - c}{3}$$

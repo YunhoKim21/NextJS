@@ -1,0 +1,74 @@
+---
+title: 'Nash Equilibrium'
+date: '2022-7-5'
+tags: ['game', 'thoery']
+draft: false
+summary: 'Introduction to Nash Equilibrium'
+---
+
+- In this article, we are going to discuss about Nash equilibrium.
+
+## Motivation
+
+- previously, we tried to determine and predict the course of game by using iterative dominance.
+- However, we noticed that even with iterative dominance some games remained inconclusive.
+- We want to investigate more on these games by using **nash equilibrium**.
+
+## Definition of Nash equilibrium
+
+- A **Nash equilibrium** is the case in which all strategic uncertainty has
+  been removed, so players behave exactly as others believe they will
+  behave.
+- A strategy profile $$s \in S$$ is a Nash equilibrium if and only if $$s_i \in BR_i(s_{-i})$$
+  for each player i. That is, $$u_i(s_i, s_{-i}) \geq u_i(s_i', s_{-i}) $$ for every $$s_i' \in S_i$$ and i.
+
+## Finding nash equilibrium
+
+- Let the normal form of game be,
+
+|     | a    | b    | c    |
+| --- | ---- | ---- | ---- |
+| w   | 3, 2 | 3, 2 | 2, 3 |
+| x   | 3, 2 | 1, 1 | 5, 4 |
+| y   | 4, 4 | 2, 3 | 1, 3 |
+| z   | 3, 6 | 0, 4 | 4, 7 |
+
+- In order to find nash equilibrium, we want to find coordinates in this table where both players are best responding.
+- Let's bold player 1's best response.
+
+|     | a        | b        | c        |
+| --- | -------- | -------- | -------- |
+| w   | 3, 2     | **3**, 2 | 2, 3     |
+| x   | 3, 2     | 1, 1     | **5**, 4 |
+| y   | **4**, 4 | 2, 3     | 1, 3     |
+| z   | 3, 6     | 0, 4     | 4, 7     |
+
+- and then, bold player 2's best response.
+
+|     | a            | b        | c            |
+| --- | ------------ | -------- | ------------ |
+| w   | 3, 2         | **3**, 2 | 2, **3**     |
+| x   | 3, 2         | 1, 1     | **5**, **4** |
+| y   | **4**, **4** | 2, 3     | 1, 3         |
+| z   | 3, 6         | 0, 4     | 4, **7**     |
+
+- Recall that both players must be best responding to each other.
+- Thus, two strategy profiles are in nash equilibrium, (y, a) and (x, c)
+- Note that one of these strategy profile (y, a) is not efficient, i.e. there is another strategy profile (x, c) that is more efficient.
+
+## Intuition behind Nash equilibrium
+
+- A strategy profile (state) is a Nash equilibrium _if and only if_ no player in the game has any incentive to unilaterally deviate from current strategy profile.
+- This means that no one in the game actually wants to change their stategy, unless they can talk to each other.
+- This statement above gives a reason why nash equilibrium is useful and stable.
+
+## When Nash equilibrium is enforced
+
+- iterative game
+- mediation
+- pre-play communication
+
+## Strict Nash Equilibrium
+
+- A nash equlilbrium is a strict nash equilibrium if and only if for every player i, thier best response is thier only best response.
+- i.e. when the payoff is strctly larger than any other options.

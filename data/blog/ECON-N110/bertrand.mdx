@@ -1,0 +1,41 @@
+---
+title: 'Bertrand Model'
+date: '2022-7-6'
+tags: ['game', 'thoery']
+draft: false
+summary: 'Analyzing Bertrand Model'
+---
+
+## Situation description
+
+- Two firms produce homogeneous products for the same market.
+- Each firms choose its own price, $$S_i = [0, \infty)$$
+- The demand function is identical to the Cournot Model,
+  $$Q = a - p$$
+- But this time, since prices of two firms are different, consumers choose the lower price. Thus the p in formula above is the minimum between $$p_1, p_2$$
+- Suppose each firm has to pay cost c per unit. Assume $$a > c$$
+
+## Normal Form
+
+- $$n = 2$$
+- $$S_1 = S_2 = [0, \infty)$$
+
+- For the utility function, we have three cases in total.
+- When we are pricing more than our opponent, we have no chance to make any profit. Thus, the outcome is zero.
+- When we are pricing the same as our opponent, we divide the total profit in half.
+- When we are pricing less that our opponent, we get the total profit.
+
+- $$u_i (p_i, p_j) = \begin{cases}0 &\quad \text{if }  q_i > q_j \\ \frac{1}{2} (a - p_i)(p_i - c) &\quad \text{if } p_i = p_j \\ (a - p_i)(p_i - c) &\quad \text{if } p_i < p_j \end{cases}$$
+
+## Finding the best response
+
+- Ignoring the existence of opponent, we have our utility function to be a parabola upside down. Let $$p_m$$, the monopoly price be the price which maximizes the utility function.
+- If the opponent is pricing more than this monopoly price, we notice that our best response is to price the monopoly price.
+
+- Consider the other case where opponent is pricing lower than monopoly price but still larger than production cost c.
+- In this case, we can pay a little less than our opponent and make all the customers buy our product. In this case we can make positive profit because the price is still larger than production cost.
+
+- Say that the opponent firm is pricing exactly the production cost c. In this case, there is no chance we can make any profit, becuase the opponent is already pricing the marginal cost.
+- So the best response for us is to make zero profit, either price higher than other and not producing any or pricing just the marginal cost.
+- Examine the last case, where the opponent is pricing less than the marginal cost. In this case, we also have no chance to make any profit, as same as the case above. Thus our best response will be pricing strictly higher than opponent.
+- In summary
