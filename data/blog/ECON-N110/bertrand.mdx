@@ -6,6 +6,9 @@ draft: false
 summary: 'Analyzing Bertrand Model'
 ---
 
+- In this post we are going to analyze bertrand model, which
+  is a model for duopoly
+
 ## Situation description
 
 - Two firms produce homogeneous products for the same market.
@@ -38,4 +41,18 @@ summary: 'Analyzing Bertrand Model'
 - Say that the opponent firm is pricing exactly the production cost c. In this case, there is no chance we can make any profit, becuase the opponent is already pricing the marginal cost.
 - So the best response for us is to make zero profit, either price higher than other and not producing any or pricing just the marginal cost.
 - Examine the last case, where the opponent is pricing less than the marginal cost. In this case, we also have no chance to make any profit, as same as the case above. Thus our best response will be pricing strictly higher than opponent.
-- In summary
+- In summary, we notice that our best response function is,
+
+$$BR_i (p_j) = \begin{cases} p_m &\quad \text{if  } p_j > p_m \\ p - \epsilon &\quad \text{if } p_m \geq p_j > c \\ \{p_i : p_i \geq p_j\} &\quad \text{if } p_j = c \\ \{p_i : i_i > p_j\} &\quad \text{if } p_j < c \end{cases}$$
+
+- Illustraing using graphs, the following is the best response function.
+
+![스크린샷 2022-07-07 오후 2.58.45.png](/static/images/br.png)
+
+## The Nash Equilibrium
+
+- The only point where both firms are doing their best response is, $$p_1 = p_2 = c$$. Thus this point is the only nash equilibrium in the game.
+
+## The significance of Bertrand Model
+
+- When quantity competition, in the case of cournot duopoly, there had to be infinite number of firms to make the price same as marginal price. But in this case, only two firms were needed.
