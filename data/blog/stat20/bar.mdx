@@ -1,0 +1,75 @@
+---
+title: '[ggplot] Bar plot in R'
+date: '2022-7-12'
+tags: ['R', 'programming', 'plot', 'ggplot', 'barplot', 'histogram']
+draft: false
+summary: 'How to make a bar plot in r using ggplot'
+---
+
+- In this post I introduce how to draw bar plots in R.
+
+## Simple Histogram in R
+
+- suppose we have data that looks like,
+
+```R
+# A tibble: 217 × 31
+   Rk    Player  Pos     Age Tm    G     GS    MP    FG    FGA   `FG%` `3P`  `3PA` `3P%` `2P`  `2PA` `2P%` `eFG%` FT    FTA
+   <chr> <chr>   <chr> <dbl> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr> <chr>  <chr> <chr>
+ 1 1     Precio… C        22 TOR   6     1     27.8  4.2   8.7   .481  0.8   2.7   ".31… 3.3   6.0   .556  .529   1.0   1.7
+ 2 2     Steven… C        28 MEM   7     5     16.3  1.3   3.0   .429  0.0   0.0   ""    1.3   3.0   .429  .429   0.9   1.6
+ 3 3     Bam Ad… C        24 MIA   18    18    34.1  5.8   9.7   .594  0.0   0.1   ".00… 5.8   9.7   .598  .594   3.2   4.2
+ 4 4     Nickei… SG       23 UTA   1     0     5.0   2.0   2.0   1.000 0.0   0.0   ""    2.0   2.0   1.000 1.000  1.0   1.0
+ 5 5     Grayso… SG       26 MIL   12    5     25.4  3.1   6.8   .451  1.6   4.0   ".39… 1.5   2.8   .529  .567   0.6   0.9
+ 6 6     Jose A… PG       23 NOP   6     0     19.5  2.7   5.5   .485  1.0   2.7   ".37… 1.7   2.8   .588  .576   1.7   2.2
+ 7 7     Kyle A… PF       28 MEM   12    1     18.4  2.4   4.3   .569  0.3   1.0   ".25… 2.2   3.3   .667  .598   0.9   1.5
+ 8 8     Gianni… PF       27 MIL   12    12    37.3  11.7  23.8  .491  0.8   3.4   ".22… 10.9  20.3  .537  .507   7.6   11.2
+ 9 9     Thanas… SF       29 MIL   8     0     2.5   0.3   0.4   .667  0.0   0.0   ""    0.3   0.4   .667  .667   0.1   0.4
+10 10    OG Anu… SF       24 TOR   6     6     36.2  6.5   13.7  .476  2.3   6.8   ".34… 4.2   6.8   .610  .561   2.0   2.7
+```
+
+- Use the code below to generate a historgram by age.
+
+```r
+NBA %>% ggplot(aes(x=Age)) + geom_histogram(binwidth=1)
+```
+
+- Note that x=Age specifies what value will go to x axis, and binwidth = 1 gives the width of every bar in the histogram.
+  The result is below.
+
+![Image](/static/images/r/bar.png)
+
+- We can also setting binwidth alternatively like below.
+
+```r
+NBA %>% ggplot(aes(x=Age)) + geom_histogram(binwidth=3)
+```
+
+- The result is below. Note that every bar in histogram represents interval containing three age.
+
+![Image](/static/images/r/bar3.png)
+
+## Giving color to bar plot
+
+- You can use fill property to give the color of bar plot. The code below uses the column Pos, to color the bars.
+
+```R
+NBA %>% ggplot(aes(x=Age, fill=Pos)) + geom_histogram(binwidth=1)
+```
+
+- The result is below.
+
+![Image](/static/images/r/bar_color.png)
+
+## Bar plot illustrating proportion
+
+- Some times, you want to plot the proportion of properties but not the absolute value. The code below does this.
+
+```r
+NBA %>% ggplot(aes(x=Age, fill=Pos)) + geom_bar(position='fill')
+```
+
+- Nothe that geom_histogram is replaces to geom_bar, and the text 'fill' is given to the variable position. Giving
+  position = 'stack' will give the same result when you use geom_historgram. The result is below.
+
+![Image](/static/images/r/bar_pro.png)
