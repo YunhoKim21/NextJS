@@ -100,6 +100,8 @@ summary: 'Introduction to MSNE and nash theorem'
 
 > Every finite game (having a finite number of players and finite strategy space) has at least one Nash equilibrium in pure or mixed strategy.
 
+- We do not prove this theorem here.
+
 ## Some properties of Mixed Strategy Nash Equilibrium
 
 - All pure strategies that are being played in a mixed-strategy Nash
@@ -109,3 +111,51 @@ summary: 'Introduction to MSNE and nash theorem'
 - Every finite game (having a finite number of players and a finite
   strategy space) has at least one Nash equilibrium in pure or mixed
   strategies.
+
+## More on matching pennies
+
+|     | H     | T     |
+| --- | ----- | ----- |
+| H   | 1, -1 | -1, 1 |
+| T   | -1, 1 | 1, -1 |
+
+- Suppose player 1 chooses head in probability p, and player 2 chooses head in probability q.
+- Then, the strategy profile can be represented as a point in $$R^2$$. More formally,
+  $$(p, q) \in [0, 1] \times [0, 1]$$
+- Assume that player 1 will play H (p = 1). Then for player 2, T is the best response.
+- If player 1 playes T, thne H is the best response.
+- If player 1 playes mixed strategy $(0.5, 0.5)$, any mixed strategy of player 2 is indifferent.
+- If player 1 playes H in a probability less than 1/2, Then for player 2 playing H is the best response,
+  and if player 1 playes H in probability greater that 1/2, Then for player 2 playing T is the best response.
+- Thus the mixed strategy best response is,
+
+$$MSBR_2(p) = \begin{cases} 1 \text{ if } p<1/2\\ \forall q \in [0, 1] \text{ if } p=1/2 \\  0 \text{ if } p>1/2\end{cases}$$
+
+- One can find mixed strategy best response function for player 1, and then find the intersection point to find MSNE.
+
+## Application : using MSNE to explain a social problem
+
+- There is a pedestrian hit by the car, and there are n bystaners.
+  Assume cost c is required for somebody to call, and if anybody calls, then everybody gets the payoff v for finding out pedestrian safe.
+  Also assume the situation where one people tends to call and other does not (pure strategy).
+- This situation is a pure strategy nash equililbrium, because for the person who doesent call, it is only paying more if they call.
+
+- The question rising is that, is there a mixed strategy nash equilibrium?
+- Assume there is, and let $\alpha$ be the probability that a player would call.
+  Becuause we are assuming mixed strategy, boh choices, calling and not calling has to make indifferent payoff.
+  If a player calls, then he gets payoff of $v - c$.
+- If a player doesn't call, there are two cases. The first case is that no one calls, and the second case where someone else calls.
+- The probability of no one else calls, is $(1 - \alpha)^{n - 1}$, and the probability that at least some one calls, is $1 - (1 - \alpha)^{n - 1}$
+  Thus the expected payoff when player doesn't call, is $0(1 - \alpha)^{n - 1} + v(1 - (1 - \alpha) ^ {n - 1})$, and this value must equal $v - c$
+- Solving for v,
+
+<center>
+$$c = v (1 - \alpha)^{n - 1}\\$$
+$$1 - \alpha = (\frac{c}{v})^{\frac{1}{n - 1}}\\$$
+$$\alpha^* = 1 - (\frac{c}{v})^{\frac{1}{n - 1}}$$
+</center>
+
+- Thus in MSNE, probability that an individual would call is, $\alpha^* = 1 - (\frac{c}{v})^{\frac{1}{n - 1}}$
+  The probability that no one calls is, $(\frac{c}{v})^{\frac{n}{n - 1}}$
+- Note that as n increases, the exponent, $1 + \frac{1}{n - 1}$ decreases, thus the total probability goes to 1, because $\frac{c}{v} < 1$.
+  This means that more and more people involved, the probability of no one calling increases.
