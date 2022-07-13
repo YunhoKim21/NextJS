@@ -29,3 +29,46 @@ summary: 'Introduction to Contracts'
 - In this case, if players talk to each other to choose A, that contract will be executed without and external enforcement.
 
 - In contrast, _external enforcement_ is when external entity has to compel in order to make players play the desired strategy.
+
+## Example : production game
+
+- The underlying game is,
+
+|     | I          | N          |
+| --- | ---------- | ---------- |
+| I   | $z_1, z_2$ | $y_1, x_2$ |
+| N   | $x_1, y_2$ | 1, 1       |
+
+- I indicates invest, and N indicates not invest. The situation where both are investing is the desired result,
+  but players might devicate from this strategy profile.
+- Assume that I, I is the most efficient outcome. So, following conditions must be true.
+
+<center>$$z_1 + z_2 > y_1 + x_2$$ $$z_1 + z_2 > x_1 + y_2$$</center>
+
+- In this case, assume that individuals have incentive to deviate from intended strategy (I, I). We can make a contract here like below.
+
+|     | I                            | N                          |
+| --- | ---------------------------- | -------------------------- |
+| I   | $z_1, z_2$                   | $y_1 + \beta, x_2 - \beta$ |
+| N   | $x_1 + \alpha, y_2 - \alpha$ | $\gamma, -\gamma$          |
+
+- Note that $\alpha, \beta, \gamma \in R$. i.e. they can also be negative numbers.
+
+- For the contract to be enforced, it should make playing I be benifical than playing N for both players.
+
+<center>$$z_1 \geq x_1 + \alpha$$ $$z_2 \geq x+2 - \beta$$</center>
+
+- Contract obeying the conditions above can be enforced.
+
+## Two inportant issues:
+
+1. Trying to achieve and "efficient outcome", the payoffs must be **transferable**.
+2. Verifiability constrants : The external enforcer may not be able to verify exactly what happened in the underlying game.
+
+-Full verifiability: A setting in which the external enforcer (e.g. the court) is able to
+perfectly differentiate between all of the different outcomes of the
+underlying game.
+
+-Limited verifiability: A setting in which the external enforcer is NOT able to perfectly
+differentiate between all of the different outcomes of the
+underlying game.
