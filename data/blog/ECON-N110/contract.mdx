@@ -65,10 +65,53 @@ summary: 'Introduction to Contracts'
 1. Trying to achieve and "efficient outcome", the payoffs must be **transferable**.
 2. Verifiability constrants : The external enforcer may not be able to verify exactly what happened in the underlying game.
 
--Full verifiability: A setting in which the external enforcer (e.g. the court) is able to
-perfectly differentiate between all of the different outcomes of the
-underlying game.
+- Full verifiability: A setting in which the external enforcer (e.g. the court) is able to
+  perfectly differentiate between all of the different outcomes of the
+  underlying game.
 
--Limited verifiability: A setting in which the external enforcer is NOT able to perfectly
-differentiate between all of the different outcomes of the
-underlying game.
+- Limited verifiability: A setting in which the external enforcer is NOT able to perfectly
+  differentiate between all of the different outcomes of the
+  underlying game.
+
+## Example
+
+|     | I        | N       |
+| --- | -------- | ------- |
+| I   | $8, 8$   | $-4, 4$ |
+| N   | $10, -2$ | $0, 0$  |
+
+- The efficient outcome is when (I, I) is played, but unfortunately (I, I) is not the nash equilibrium.
+- Assume there is limited verifiability.
+
+|     | I                          | N                         |
+| --- | -------------------------- | ------------------------- |
+| I   | $8, 8$                     | $-4 + \alpha, 4 - \alpha$ |
+| N   | $10 + \alpha, -2 - \alpha$ | $0 + \alpha, 0 - \alpha$  |
+
+- For (I, I) to be the nash equilibrium, two conditions must be satisfied.
+
+<center>
+$$8 \geq 10 + \alpha \Rightarrow \alpha \leq -2$$
+
+$$8 \geq 4 - \alpha \Rightarrow \alpha \geq -4$$
+
+</center>
+
+- There are many $\alpha$ satisfing both conditions, for example $\alpha = -3$. But in other cases,
+  there might be no $\alpha$ that satisfies both conditions.
+
+## Contracting with Court-Imposed Breach Remedies
+
+- The parties specify just how they want to coordinate in the
+  underlying game.
+  If a breach occurs, the external enforcer compels a transfer
+  according to a legal rule. Three common ones:
+
+1. **Expectation damages** : make the plaintiff (harmed party) as
+   well off as he/she would have been had no breach occurred.
+
+2. **Reliance damages** : return the plaintiff to a payoff that would
+   have occurred with no contract (zero).
+
+3. **Restitution damages** : return the defendant (offending party)
+   to a payoff that would have occurred with no contract (zero).
