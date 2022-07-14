@@ -1,0 +1,64 @@
+---
+title: 'More on extensive forms'
+date: '2022-7-14'
+tags: ['game', 'thoery', 'extensive', 'form']
+draft: false
+summary: 'more on extensive form'
+---
+
+## Quick review : Extensive form representation
+
+- Nodes: Where players choose actions - Successor Nodes : Node B is a successor to Node A if there is some path going from
+  A to B. - Immediate Successor : B is an immediate successor to A if there is a branch leading
+  directly from A to B. - Predecessor Nodes : Same idea as successor nodes but moving through the tree
+  backwards.
+- Branches: Specific actions.
+- Labels: Identify nodes or branches.
+- Payoffs: Represent preferences over outcomes.
+- Information sets: Reveal what a player knows when he/she makes a decision.
+  - A player’s strategy must give a decision for each of his/her info sets.
+
+## Example
+
+![tree example](/static/images/game-thoery/tree1.png)
+
+- Initial Node : a
+- All successors to a : b, c, d, e, f, g, h, i, j, k
+- All immediate successors to a : b, c
+- All predecessor node to f : a, b, d
+- All immediate predecessor node to f : d
+- Information sets :
+  - player 1 : $\{a\}, \{d\}, \{e\}$
+  - player 2 : $\{b, c\}$
+
+## Tree rules
+
+- Following are the rules that game tree must obey.
+
+1. Every node is a successor of the initial node, and the initial node is the only one
+   with this property.
+2. Each node except the initial node has exactly one immediate predecessor. The
+   initial node has no predecessors.
+3. Multiple branches extending from the same node have different action labels.
+4. Each information set contains decision nodes for only one of the players.
+5. All nodes in a given information set must have the same number of immediate
+   successors and they must have the same set of action labels on the branches
+   leading to these successors. (if not, it is trivial that the player can distinguish states. )
+
+## Representing infinite action space
+
+![continuous action space](/static/images/game-thoery/tree2.png)
+
+- We can use dotted line to represent simultaneous move games.
+
+![continuous action space](/static/images/game-thoery/tree3.png)
+
+- The Stackelberg game, represented by the graph above, is a variation of [cournot game](./cournot) we looked before.
+- The difference here is that it is not simultaneous. Thus the strategy spaces are,
+
+<center> 
+$$S_1 = [0, \infty) \\$$
+$$S_2 = \{ f : [0, \infty) \rightarrow [0, \infty) \}$$
+</center>
+
+- Note that strategy space of player 2 is **not** positive real number, becuase player 2 can decide with information of player 1's decision.
