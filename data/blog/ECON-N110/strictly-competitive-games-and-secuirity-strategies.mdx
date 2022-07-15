@@ -1,13 +1,43 @@
 ---
 title: 'Strictly Competitive Games and Security Strategies'
 date: '2022-7-12'
-tags: ['game', 'thoery']
+tags: ['game', 'thoery', 'competitive-games', 'security-strategies']
 draft: false
-summary: 'Introduction to MSNE and nash theorem'
+summary: 'Introduction to Competitive Games and Security Strategies'
 ---
 
 ## Strictly competitive game
 
 - A two-player game is **strictly competitive** if, for any two strategy profiles $s$ and $s'$,
   $u_1(s) \geq u_1(s')$ if and only if $u_2(s) \leq u_2(s')$.
-- $s_i$ is a \*\*security strategy for player $i$ if it solves:
+- $s_i$ is a **security strategy** for player $i$ if it solves:
+
+<center> 
+$$\max_{s_i \in S_i} \min_{s_j \in S_j} u_i(s)$$
+</center>
+
+- Note that a secure strategy might not be rationalizable.
+- Player i's **security level** is the corresponding payoff.
+
+## Result
+
+- If $s^*$ is a nash equilibrium of a _strictly competitive game_, then $s^*_1$ and $s^*_2$ are security strategies for player 1 and player 2.
+
+### Example
+
+|     | F    | C    | B    |
+| --- | ---- | ---- | ---- |
+| F   | 0, 5 | 2, 3 | 2, 3 |
+| C   | 2, 3 | 0, 5 | 3, 2 |
+| B   | 5, 0 | 3, 2 | 2, 3 |
+
+- We first find the security strategies for player 1 and player 2. For player 1, playing B would be the security strategy and
+  for player 2, playing C or B will be the secure strategy. (_Why?_) Thus, the secure startegy set is, $\{(B, C), (B, B)\}$
+
+'''mermaid
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+'''

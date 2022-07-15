@@ -1,0 +1,121 @@
+---
+title: 'Contracts'
+date: '2022-7-13'
+tags: ['game', 'thoery', 'Contracts']
+draft: false
+summary: 'Introduction to Contracts'
+---
+
+- In this article we discuss about the notion of contract, which requires understanding of _Nash Equilibrium_. If you are not familier
+  with nash equiilbrium, please refer to [this article](./nash-eq).
+
+## Contracts
+
+- _Contract_ is an agreement about behavior that is intended to be enforced.
+  Contracts are intended to be executed, but might not always be excecuted.
+
+- The following is one example of procedure that contracts can be enforced.
+
+1. Players form a contract.
+2. They play the underlying game (called production).
+3. An external enforcer (court, arbitrator, etc. ) observes the outcome of the underlying game and compels transfers.
+
+- There are two types of enforcement : _self-enforcement_ and _external enforcement_.
+
+- _Self enforcement_ is when the nash equilibrium is already the desired result. For an example, there is the pareto coordination game.
+
+|     | A    | B    |
+| --- | ---- | ---- |
+| A   | 2, 2 | 0, 0 |
+| B   | 0, 0 | 1, 1 |
+
+- In this case, if players talk to each other to choose A, that contract will be executed without and external enforcement.
+
+- In contrast, _external enforcement_ is when external entity has to compel in order to make players play the desired strategy.
+
+## Example : production game
+
+- The underlying game is,
+
+|     | I          | N          |
+| --- | ---------- | ---------- |
+| I   | $z_1, z_2$ | $y_1, x_2$ |
+| N   | $x_1, y_2$ | 1, 1       |
+
+- I indicates invest, and N indicates not invest. The situation where both are investing is the desired result,
+  but players might devicate from this strategy profile.
+- Assume that I, I is the most efficient outcome. So, following conditions must be true.
+
+<center>$$z_1 + z_2 > y_1 + x_2$$ $$z_1 + z_2 > x_1 + y_2$$</center>
+
+- In this case, assume that individuals have incentive to deviate from intended strategy (I, I). We can make a contract here like below.
+
+|     | I                            | N                          |
+| --- | ---------------------------- | -------------------------- |
+| I   | $z_1, z_2$                   | $y_1 + \beta, x_2 - \beta$ |
+| N   | $x_1 + \alpha, y_2 - \alpha$ | $\gamma, -\gamma$          |
+
+- Note that $\alpha, \beta, \gamma \in R$. i.e. they can also be negative numbers.
+
+- For the contract to be enforced, it should make playing I be benifical than playing N for both players.
+
+<center>$$z_1 \geq x_1 + \alpha$$ $$z_2 \geq x+2 - \beta$$</center>
+
+- Contract obeying the conditions above can be enforced.
+
+## Two important issues:
+
+1. Trying to achieve and "efficient outcome", the payoffs must be **transferable**.
+2. Verifiability constrants : The external enforcer may not be able to verify exactly what happened in the underlying game.
+
+- Full verifiability: A setting in which the external enforcer (e.g. the court) is able to
+  perfectly differentiate between all of the different outcomes of the
+  underlying game.
+
+- Limited verifiability: A setting in which the external enforcer is NOT able to perfectly
+  differentiate between all of the different outcomes of the
+  underlying game.
+
+## Example
+
+|     | I        | N       |
+| --- | -------- | ------- |
+| I   | $8, 8$   | $-4, 4$ |
+| N   | $10, -2$ | $0, 0$  |
+
+- The efficient outcome is when (I, I) is played, but unfortunately (I, I) is not the nash equilibrium.
+- Assume there is limited verifiability.
+
+|     | I                          | N                         |
+| --- | -------------------------- | ------------------------- |
+| I   | $8, 8$                     | $-4 + \alpha, 4 - \alpha$ |
+| N   | $10 + \alpha, -2 - \alpha$ | $0 + \alpha, 0 - \alpha$  |
+
+- For (I, I) to be the nash equilibrium, two conditions must be satisfied.
+
+<center>
+
+$$8 \geq 10 + \alpha \Rightarrow \alpha \leq -2$$
+
+$$8 \geq 4 - \alpha \Rightarrow \alpha \geq -4$$
+
+</center>
+
+- There are many $\alpha$ satisfing both conditions, for example $\alpha = -3$. But in other cases,
+  there might be no $\alpha$ that satisfies both conditions.
+
+## Contracting with Court-Imposed Breach Remedies
+
+- The parties specify just how they want to coordinate in the
+  underlying game.
+  If a breach occurs, the external enforcer compels a transfer
+  according to a legal rule. Three common ones:
+
+1. **Expectation damages** : make the plaintiff (harmed party) as
+   well off as he/she would have been had no breach occurred.
+
+2. **Reliance damages** : return the plaintiff to a payoff that would
+   have occurred with no contract (zero).
+
+3. **Restitution damages** : return the defendant (offending party)
+   to a payoff that would have occurred with no contract (zero).
