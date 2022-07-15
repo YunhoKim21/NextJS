@@ -1,5 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
+import Script from 'next/script'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
@@ -13,11 +14,14 @@ export default function About({ authorDetails }) {
 
   return (
     <div>
-      <MDXLayoutRenderer
-        layout={frontMatter.layout || DEFAULT_LAYOUT}
-        mdxSource={mdxSource}
-        frontMatter={frontMatter}
-      />
+      <head></head>
+      <body>
+        <MDXLayoutRenderer
+          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          mdxSource={mdxSource}
+          frontMatter={frontMatter}
+        />
+      </body>
     </div>
   )
 }
