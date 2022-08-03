@@ -1,5 +1,6 @@
-import { Button, Center, Container, Space, Text } from '@mantine/core'
+import { Button, Center, Container, Space, Text, Tooltip } from '@mantine/core'
 import { useReducer } from 'react'
+import { useClipboard } from '@mantine/hooks'
 
 export default function Connect4() {
   const reducer = (state, action) => {
@@ -13,10 +14,23 @@ export default function Connect4() {
     }
   }
   const [state, dispatch] = useReducer(reducer, { value: 0 })
+  const clipboard = useClipboard()
   return (
     <Container>
       <Center>
-        <Text size={80}>{state.value}</Text>
+        <Tooltip
+          label="Value copied!"
+          offset={5}
+          position="bottom"
+          radius="xl"
+          transition="slide-down"
+          transitionDuration={100}
+          opened={clipboard.copied}
+        >
+          <Text size={80} onClick={() => clipboard.copy(state.value)}>
+            {state.value}
+          </Text>
+        </Tooltip>
       </Center>
       <Space h="md" />
       <Center>
