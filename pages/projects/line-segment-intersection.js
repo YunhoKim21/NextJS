@@ -185,7 +185,7 @@ export default function Home() {
         Interesting Quesitons
       </Text>
       <UnorderedList>
-        <ListItem>Come up with an algorithm that does this in O(nlogn)</ListItem>
+        <ListItem>Come up with an algorithm that does this in O(nlogn).</ListItem>
         <ListItem>
           When there are n lines, what would be the average number of intersections?
         </ListItem>
