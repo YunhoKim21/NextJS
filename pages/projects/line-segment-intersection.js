@@ -6,12 +6,14 @@ import {
   Center,
   Flex,
   Input,
+  ListItem,
   NumberDecrementStepper,
   NumberIncrementStepper,
   NumberInput,
   NumberInputField,
   NumberInputStepper,
   Text,
+  UnorderedList,
 } from '@chakra-ui/react'
 
 function rInt(min, max) {
@@ -122,8 +124,6 @@ function generate(n_lines) {
     }
   })
 
-  console.log(intersects.length)
-
   lines.map((points) => {
     var line = new Konva.Line({
       points: points,
@@ -142,7 +142,7 @@ function generate(n_lines) {
 }
 
 export default function Home() {
-  const [n_lines, set_n_lines] = useState(50)
+  const [n_lines, set_n_lines] = useState(20)
 
   useEffect(() => {
     generate(n_lines)
@@ -151,11 +151,10 @@ export default function Home() {
   return (
     <>
       <Text className="text-3xl">Line segment intersection </Text>
-      <Text className="mt-5 text-xl">
-        Detects all intersections of randomly generated line segments, in O(nlogn).{' '}
-      </Text>
+      <Text>Detects all intersections of randomly generated line segments, in O(nlogn). </Text>
       <Center>
         <NumberInput
+          min={1}
           allowMouseWheel
           defaultValue={20}
           onChange={(e) => {
@@ -182,6 +181,19 @@ export default function Home() {
       <Center>
         <div id="container"></div>
       </Center>
+      <Text fontSize="3xl" marginTop="10">
+        Interesting Quesitons
+      </Text>
+      <UnorderedList>
+        <ListItem>Come up with an algorithm that does this in O(nlogn)</ListItem>
+        <ListItem>
+          When there are n lines, what would be the average number of intersections?
+        </ListItem>
+        <ListItem>
+          Let p be the probability of two random line intersecting. What is the relationship between
+          p and total number of intersections?
+        </ListItem>
+      </UnorderedList>
     </>
   )
 }
