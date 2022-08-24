@@ -28,6 +28,7 @@
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
     "jsx-runtime": "^1.2.0",
+    "konva": "^8.3.11",
     "mdx-bundler": "^8.0.0",
     "mdx-mermaid": "^1.2.3",
     "mermaid": "^9.1.3",
