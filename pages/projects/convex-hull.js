@@ -14,8 +14,7 @@ import {
 } from '@chakra-ui/react'
 
 export default function App() {
-  const [n_points, set_n_points] = useState(40)
-  const [n_line_segment, set_n_line_segments] = useState(0)
+  const [n_points, set_n_points] = useState(20)
 
   useEffect(() => {
     const width = window.innerWidth * 0.7
