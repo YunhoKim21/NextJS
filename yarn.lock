@@ -5897,6 +5897,11 @@ kleur@^4.0.3:
   resolved "https://registry.npmjs.org/kleur/-/kleur-4.1.4.tgz"
   integrity sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
 
+konva@^8.3.11:
+  version "8.3.11"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-8.3.11.tgz#ffd8012a8240498d63652218c8db13e7fb51a3e7"
+  integrity sha512-5PsE3oQYnzwwUUCv8gV2zpLjenotqLy0AmXauyy9GPi+UHIynmLkrsAIZfEkjPNEgAwmh5r6I0JQa1fTt8ZrGw==
+
 language-subtag-registry@~0.3.2:
   version "0.3.21"
   resolved "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz"
