@@ -109,6 +109,21 @@ export default function ConvexHull() {
 
   return (
     <>
+      <p className="text-3xl">Line Segment Intersection </p>
+      <p className="m-5 text-lg">
+        The following code detects all intersection of randomly generated line segments, in O(nlogn)
+        time complexity.
+      </p>
+      <div className="flex place-items-center justify-center">
+        <button
+          className="rounded-xl bg-gray-300 p-2"
+          onClick={() => {
+            setVarForTrigger(varForTrigger + 1)
+          }}
+        >
+          Generate
+        </button>
+      </div>
       <div className="canvas_wrap">
         <canvas ref={canvasRef}></canvas>
       </div>
