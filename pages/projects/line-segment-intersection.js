@@ -1,20 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { rInt, twoLineIntersection, in_range } from 'utils/math'
-import {
-  Button,
-  ButtonGroup,
-  Center,
-  Flex,
-  Input,
-  ListItem,
-  NumberDecrementStepper,
-  NumberIncrementStepper,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react'
 
 function find_intersect(to_search, current, lines) {
   var result = []
@@ -124,35 +109,6 @@ export default function ConvexHull() {
 
   return (
     <>
-      <Text fontSize="3xl">Line segment intersection </Text>
-      <Text>Detects all intersections of randomly generated line segments, in O(nlogn). </Text>
-      <Center>
-        <NumberInput
-          min={1}
-          allowMouseWheel
-          defaultValue={20}
-          onChange={(e) => {
-            if (e >= 1) {
-              set_n_lines(parseInt(e))
-            }
-          }}
-        >
-          <NumberInputField />
-          <NumberInputStepper>
-            <NumberIncrementStepper />
-            <NumberDecrementStepper />
-          </NumberInputStepper>
-        </NumberInput>
-        <Button
-          margin={10}
-          align="center"
-          onClick={() => {
-            setVarForTrigger(varForTrigger + 1)
-          }}
-        >
-          Regenerate
-        </Button>
-      </Center>
       <div className="canvas_wrap">
         <canvas ref={canvasRef}></canvas>
       </div>
