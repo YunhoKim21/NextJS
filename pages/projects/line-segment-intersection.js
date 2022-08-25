@@ -31,7 +31,7 @@ export default function ConvexHull() {
   const [varForTrigger, setVarForTrigger] = useState(0)
 
   useEffect(() => {
-    const width = window.innerWidth * 0.7
+    const width = window.innerWidth * 0.75
     const height = window.innerHeight * 0.8
 
     const canvas = canvasRef.current
@@ -115,6 +115,16 @@ export default function ConvexHull() {
         time complexity.
       </p>
       <div className="flex place-items-center justify-center">
+        <input
+          type="number"
+          className="mx-3 border-0"
+          defaultValue={20}
+          onChange={(e) => {
+            if (e.target.value >= 1) {
+              set_n_lines(e.target.value)
+            }
+          }}
+        ></input>
         <button
           className="rounded-xl bg-gray-300 p-2"
           onClick={() => {
@@ -124,8 +134,8 @@ export default function ConvexHull() {
           Generate
         </button>
       </div>
-      <div className="canvas_wrap">
-        <canvas ref={canvasRef}></canvas>
+      <div className="canvas_wrap pace-items-center m-5 justify-center rounded-2xl bg-gray-100">
+        <canvas ref={canvasRef} className=""></canvas>
       </div>
     </>
   )
