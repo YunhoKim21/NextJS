@@ -102,6 +102,7 @@ export default function ConvexHull() {
 
         context.beginPath(); 
         context.arc(100, 100, 100, 0, 2 * Math.PI, false); 
+        context.arc()
         context.fill()*/
 
     setCanvasTag(canvas)
