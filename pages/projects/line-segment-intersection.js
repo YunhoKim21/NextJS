@@ -35,8 +35,12 @@ export default function ConvexHull() {
     const height = window.innerHeight * 0.8
 
     const canvas = canvasRef.current
-    canvas.width = width
-    canvas.height = height
+    canvas.style.width = '100%'
+    canvas.style.height = '100%'
+    canvas.width = canvas.offsetWidth
+    canvas.height = canvas.offsetHeight
+    //canvas.width = width
+    //canvas.height = height
 
     const context = canvas.getContext('2d')
 
@@ -134,7 +138,7 @@ export default function ConvexHull() {
           Generate
         </button>
       </div>
-      <div className="canvas_wrap pace-items-center m-5 justify-center rounded-2xl bg-gray-100">
+      <div className=" pace-items-center m-5 h-5/6 justify-center rounded-2xl bg-gray-100">
         <canvas ref={canvasRef} className=""></canvas>
       </div>
     </>
