@@ -24,21 +24,24 @@ function find_intersect(to_search, current, lines) {
   return result
 }
 
-export default function ConvexHull() {
+export default function App() {
   const canvasRef = useRef(null)
   const [canvasTag, setCanvasTag] = useState([])
   const [n_lines, set_n_lines] = useState(20)
   const [varForTrigger, setVarForTrigger] = useState(0)
 
   useEffect(() => {
-    const width = window.innerWidth * 0.75
-    const height = window.innerHeight * 0.8
+    
 
     const canvas = canvasRef.current
     canvas.style.width = '100%'
     canvas.style.height = '100%'
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
+    console.log(canvas.offsetHeight, canvas.offsetWidth)
+
+    const width = canvas.offsetWidth
+    const height = canvas.offsetHeight
     //canvas.width = width
     //canvas.height = height
 
@@ -138,7 +141,7 @@ export default function ConvexHull() {
           Generate
         </button>
       </div>
-      <div className=" pace-items-center m-5 h-5/6 justify-center rounded-2xl bg-gray-100">
+      <div className=" pace-items-center m-5 justify-center rounded-2xl bg-gray-100 p-2 h-screen" >
         <canvas ref={canvasRef} className=""></canvas>
       </div>
     </>
