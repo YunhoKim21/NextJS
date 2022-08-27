@@ -54,8 +54,6 @@ export default function App() {
           break
         }
         if (ccw(...stack[stack.length - 2], ...stack[stack.length - 1], ...current) > 0) {
-          //yes
-
           stack.push(current)
           break
         } else {
