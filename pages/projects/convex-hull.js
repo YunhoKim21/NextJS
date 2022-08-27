@@ -45,7 +45,7 @@ export default function App() {
       return slope1 - slope2
     })
 
-    while (left.length >= 0) {
+    while (left.length) {
       var current = left.pop()
       var True = true
       while (True) {
