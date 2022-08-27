@@ -134,6 +134,7 @@ export default function ConvexHull() {
           onClick={() => {
             setVarForTrigger(varForTrigger + 1)
             //Hi
+            //Hello
           }}
         >
           Generate
