@@ -134,8 +134,6 @@ export default function ConvexHull() {
           className="rounded-xl bg-gray-300 p-2"
           onClick={() => {
             setVarForTrigger(varForTrigger + 1)
-            //Hi
-            //Hello
           }}
         >
           Generate
