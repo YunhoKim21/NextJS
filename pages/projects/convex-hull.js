@@ -6,6 +6,7 @@ export default function App() {
   const canvasRef = useRef(null)
   const [canvasTag, setCanvasTag] = useState([])
   const [n_points, set_n_points] = useState(20)
+  const [varForTrigger, setVarForTrigger] = useState(0)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -96,7 +97,7 @@ export default function App() {
     })
 
     setCanvasTag(canvas)
-  }, [n_points])
+  }, [n_points, varForTrigger])
 
   return (
     <>
@@ -105,7 +106,30 @@ export default function App() {
         Following js code generates convex hull, using Graham scan algorithm. The whole process
         takes O(nlogn) time complexity.
       </p>
-      <div className=" pace-items-center m-5 h-screen justify-center rounded-2xl bg-gray-100 p-5">
+
+      <div className="my-5 flex place-items-center justify-center">
+        <input
+          type="number"
+          className="mx-3 border-0"
+          defaultValue={20}
+          min={3}
+          onChange={(e) => {
+            if (e.target.value >= 3) {
+              set_n_points(e.target.value)
+            }
+          }}
+        ></input>
+        <button
+          className="rounded-xl bg-gray-300 p-2"
+          onClick={() => {
+            setVarForTrigger(varForTrigger + 1)
+          }}
+        >
+          Generate
+        </button>
+      </div>
+
+      <div className=" pace-items-center m-4 h-screen justify-center rounded-2xl bg-gray-100 p-5">
         <canvas ref={canvasRef} className=""></canvas>
       </div>
     </>
