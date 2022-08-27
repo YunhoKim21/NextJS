@@ -31,19 +31,15 @@ export default function App() {
   const [varForTrigger, setVarForTrigger] = useState(0)
 
   useEffect(() => {
-    
-
     const canvas = canvasRef.current
+
     canvas.style.width = '100%'
     canvas.style.height = '100%'
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
-    console.log(canvas.offsetHeight, canvas.offsetWidth)
 
     const width = canvas.offsetWidth
     const height = canvas.offsetHeight
-    //canvas.width = width
-    //canvas.height = height
 
     const context = canvas.getContext('2d')
 
@@ -141,7 +137,7 @@ export default function App() {
           Generate
         </button>
       </div>
-      <div className=" pace-items-center m-5 justify-center rounded-2xl bg-gray-100 p-2 h-screen" >
+      <div className="canvas_wrap pace-items-center m-5 justify-center rounded-2xl bg-gray-100">
         <canvas ref={canvasRef} className=""></canvas>
       </div>
     </>
