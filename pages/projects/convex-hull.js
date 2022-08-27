@@ -7,6 +7,7 @@ export default function App() {
   const [canvasTag, setCanvasTag] = useState([])
   const [n_points, set_n_points] = useState(20)
   const [varForTrigger, setVarForTrigger] = useState(0)
+  const [nPointsInvolved, setnPointsInvolved] = useState(0)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -61,6 +62,7 @@ export default function App() {
           stack.pop()
         }
       }
+      setnPointsInvolved(stack.length)
     }
 
     /*
@@ -132,6 +134,8 @@ export default function App() {
       <div className=" pace-items-center m-4 h-screen justify-center rounded-2xl bg-gray-100 p-5">
         <canvas ref={canvasRef} className=""></canvas>
       </div>
+
+      <p className="">Number of points on edge : {nPointsInvolved}</p>
     </>
   )
 }
