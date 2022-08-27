@@ -136,7 +136,7 @@ export default function ConvexHull() {
             //some change
           }}
         >
-          Generate
+          generate
         </button>
       </div>
       <div className=" pace-items-center m-5 h-5/6 justify-center rounded-2xl bg-gray-100">
