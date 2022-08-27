@@ -103,6 +103,7 @@ export default function ConvexHull() {
         context.moveTo(0, 0); 
         context.lineTo(100, 100); 
         context.stroke();
+        some note
 
         context.beginPath(); 
         context.arc(100, 100, 100, 0, 2 * Math.PI, false); 
