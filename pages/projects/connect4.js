@@ -1,3 +1,5 @@
+import { Button } from '@chakra-ui/react'
+
 export default function connect4() {
-  return 'connect4'
+  return <Button>Hi</Button>
 }
