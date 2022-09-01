@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const colors = ['white', 'red.400', 'blue.400']
 
-const initialGameState = {
+var initialGameState = {
   board: [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
@@ -94,7 +94,14 @@ function Column(props) {
 }
 
 function handleReset(setter) {
-  console.log(initialGameState.board)
+  initialGameState.board = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+  ]
   setter(JSON.parse(JSON.stringify(initialGameState)))
 }
 
