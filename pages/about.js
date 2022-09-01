@@ -14,7 +14,6 @@ export default function About({ authorDetails }) {
 
   return (
     <div>
-      <head></head>
       <body>
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}
