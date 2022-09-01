@@ -11,6 +11,12 @@ const projectsData = [
     imgSrc: '/static/images/convexhull.png',
     href: '/projects/convex-hull',
   },
+  {
+    title: 'Connect4',
+    description: `play connect 4`,
+    imgSrc: '/static/images/connect4.png',
+    href: '/projects/connect4',
+  },
 ]
 
 export default projectsData
