@@ -94,6 +94,7 @@ function Column(props) {
 }
 
 function handleReset(setter) {
+  console.log(initialGameState.board)
   setter(JSON.parse(JSON.stringify(initialGameState)))
 }
 
@@ -121,7 +122,7 @@ export default function Connect4() {
           <Flex>
             {gameState.board.map((column, index) => (
               <Column
-                key={column}
+                key={index}
                 column={column}
                 index={index}
                 gameState={gameState}
