@@ -1,0 +1,32 @@
+---
+title: 'gdown시 Access denied 해결하기'
+date: '2022-9-2'
+tags: ['gdown', 'error', 'resolve']
+draft: false
+summary: ''
+---
+
+linux에서는 gdown이라는 명령어를 통해 구글 드라이브 파일을 쉽게 받을 수 있다. 그런데 gdown 을 할 시 다음과 같은 에러가 뜨는 경우가 있다.
+
+```
+Access denied with the following error:
+
+        Cannot retrieve the public link of the file. You may need to change
+        the permission to 'Anyone with the link', or have had many accesses.
+
+You may still be able to access the file from the browser:
+
+         https://drive.google.com/uc?id=1-0xOf6g58OmtKtEWJlU3VlnfRqPN9Uq7
+```
+
+뜨기는 Access denied 라고 되어 구글 드라이브 권한 관련 문제인 줄 알았지만, 실제로는 바이러스 검사 경고 때문에 뜨는 에러였다.
+
+![gdown](/static/images/gdown.png)
+
+이때 인터넷을 뒤져보니 gdown의 신규 버전에는 이 에러가 해결되어 있다고 하여 다음과 같은 명령어로 새로운 gdown을 깔아 해결했다!
+
+```bash
+pip install -U --no-cache-dir gdown --pre
+```
+
+출처 : https://github.com/wkentaro/gdown/issues/43
