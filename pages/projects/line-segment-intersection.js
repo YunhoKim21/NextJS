@@ -1,5 +1,5 @@
 import { PageSEO } from '@/components/SEO'
-import { Flex } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 import React, { useRef, useState, useEffect } from 'react'
 import { rInt, twoLineIntersection, in_range } from 'utils/math'
 
@@ -31,6 +31,7 @@ export default function ConvexHull() {
   const [canvasTag, setCanvasTag] = useState([])
   const [n_lines, set_n_lines] = useState(20)
   const [varForTrigger, setVarForTrigger] = useState(0)
+  const [n_points, set_n_points] = useState(0)
 
   useEffect(() => {
     var width = window.innerWidth * 0.75
@@ -114,6 +115,7 @@ export default function ConvexHull() {
         context.fill()*/
 
     setCanvasTag(canvas)
+    set_n_points(intersects.length)
   }, [n_lines, varForTrigger])
 
   return (
@@ -145,9 +147,11 @@ export default function ConvexHull() {
         </button>
       </div>
 
-      <Flex backgroundColor="gray.100" h="70vh" m="5" rounded="3xl">
+      <Flex backgroundColor="gray.100" h="70vh" m="5" rounded="3xl" p="5">
         <canvas ref={canvasRef} className=""></canvas>
       </Flex>
+
+      <Text>Number of intersections : {n_points}</Text>
     </>
   )
 }
