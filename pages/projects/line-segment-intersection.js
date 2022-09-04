@@ -1,4 +1,5 @@
 import { PageSEO } from '@/components/SEO'
+import { Flex } from '@chakra-ui/react'
 import React, { useRef, useState, useEffect } from 'react'
 import { rInt, twoLineIntersection, in_range } from 'utils/math'
 
@@ -32,8 +33,8 @@ export default function ConvexHull() {
   const [varForTrigger, setVarForTrigger] = useState(0)
 
   useEffect(() => {
-    const width = window.innerWidth * 0.75
-    const height = window.innerHeight * 0.8
+    var width = window.innerWidth * 0.75
+    var height = window.innerHeight * 0.8
 
     const canvas = canvasRef.current
     canvas.style.width = '100%'
@@ -42,6 +43,8 @@ export default function ConvexHull() {
     canvas.height = canvas.offsetHeight
     //canvas.width = width
     //canvas.height = height
+    width = canvas.width
+    height = canvas.height
 
     const context = canvas.getContext('2d')
 
@@ -141,9 +144,10 @@ export default function ConvexHull() {
           Generate
         </button>
       </div>
-      <div className=" pace-items-center m-5 h-5/6 h-screen h-screen justify-center rounded-2xl bg-gray-100">
+
+      <Flex backgroundColor="gray.100" h="70vh" m="5" rounded="3xl">
         <canvas ref={canvasRef} className=""></canvas>
-      </div>
+      </Flex>
     </>
   )
 }
