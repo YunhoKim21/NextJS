@@ -1,3 +1,4 @@
+import { PageSEO } from '@/components/SEO'
 import React, { useRef, useState, useEffect } from 'react'
 import { rInt, twoLineIntersection, in_range } from 'utils/math'
 
@@ -114,6 +115,7 @@ export default function ConvexHull() {
 
   return (
     <>
+      <PageSEO title="Line segment intersection" />
       <p className="text-3xl">Line Segment Intersection </p>
       <p className="m-5 text-lg">
         The following code detects all intersection of randomly generated line segments, in O(nlogn)

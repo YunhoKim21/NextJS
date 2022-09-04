@@ -1,3 +1,5 @@
+import { PageSEO } from '@/components/SEO'
+import Head from 'next/head'
 import React, { useRef, useState, useEffect } from 'react'
 import { CubeTexture } from 'three'
 import { ccw, rInt } from 'utils/math'
@@ -103,6 +105,8 @@ export default function App() {
 
   return (
     <>
+      <PageSEO title="Convex hull generation" />
+
       <p className="text-3xl">Convex Hull generation</p>
       <p>
         Following js code generates convex hull, using Graham scan algorithm. The whole process
