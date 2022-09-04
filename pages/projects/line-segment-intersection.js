@@ -1,3 +1,5 @@
+import { PageSEO } from '@/components/SEO'
+import { Flex, Text } from '@chakra-ui/react'
 import React, { useRef, useState, useEffect } from 'react'
 import { rInt, twoLineIntersection, in_range } from 'utils/math'
 
@@ -29,10 +31,11 @@ export default function ConvexHull() {
   const [canvasTag, setCanvasTag] = useState([])
   const [n_lines, set_n_lines] = useState(20)
   const [varForTrigger, setVarForTrigger] = useState(0)
+  const [n_points, set_n_points] = useState(0)
 
   useEffect(() => {
-    const width = window.innerWidth * 0.75
-    const height = window.innerHeight * 0.8
+    var width = window.innerWidth * 0.75
+    var height = window.innerHeight * 0.8
 
     const canvas = canvasRef.current
     canvas.style.width = '100%'
@@ -41,6 +44,8 @@ export default function ConvexHull() {
     canvas.height = canvas.offsetHeight
     //canvas.width = width
     //canvas.height = height
+    width = canvas.width
+    height = canvas.height
 
     const context = canvas.getContext('2d')
 
@@ -110,10 +115,12 @@ export default function ConvexHull() {
         context.fill()*/
 
     setCanvasTag(canvas)
+    set_n_points(intersects.length)
   }, [n_lines, varForTrigger])
 
   return (
     <>
+      <PageSEO title="Line segment intersection" />
       <p className="text-3xl">Line Segment Intersection </p>
       <p className="m-5 text-lg">
         The following code detects all intersection of randomly generated line segments, in O(nlogn)
@@ -139,9 +146,12 @@ export default function ConvexHull() {
           Generate
         </button>
       </div>
-      <div className=" pace-items-center m-5 h-5/6 h-screen h-screen justify-center rounded-2xl bg-gray-100">
+
+      <Flex backgroundColor="gray.100" h="70vh" m="5" rounded="3xl" p="5">
         <canvas ref={canvasRef} className=""></canvas>
-      </div>
+      </Flex>
+
+      <Text>Number of intersections : {n_points}</Text>
     </>
   )
 }

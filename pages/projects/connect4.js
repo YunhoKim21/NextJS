@@ -1,3 +1,4 @@
+import { PageSEO } from '@/components/SEO'
 import { Flex, Box, Text, Center, Button } from '@chakra-ui/react'
 import { useState } from 'react'
 
@@ -110,6 +111,7 @@ export default function Connect4() {
 
   return (
     <>
+      <PageSEO title="Connect4" />
       <Center h="100vh" flexDir="column">
         <Flex marginBottom="20" align="center">
           <Text fontSize="40" marginX="20">

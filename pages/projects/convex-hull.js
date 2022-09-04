@@ -1,3 +1,6 @@
+import { PageSEO } from '@/components/SEO'
+import { Flex } from '@chakra-ui/react'
+import Head from 'next/head'
 import React, { useRef, useState, useEffect } from 'react'
 import { CubeTexture } from 'three'
 import { ccw, rInt } from 'utils/math'
@@ -103,6 +106,8 @@ export default function App() {
 
   return (
     <>
+      <PageSEO title="Convex hull generation" />
+
       <p className="text-3xl">Convex Hull generation</p>
       <p>
         Following js code generates convex hull, using Graham scan algorithm. The whole process
@@ -131,9 +136,9 @@ export default function App() {
         </button>
       </div>
 
-      <div className=" pace-items-center m-4 h-screen justify-center rounded-2xl bg-gray-100 p-5">
+      <Flex backgroundColor="gray.100" height="70vh" rounded="3xl" p="5">
         <canvas ref={canvasRef} className=""></canvas>
-      </div>
+      </Flex>
 
       <p className="">Number of points on edge : {nPointsInvolved}</p>
     </>
