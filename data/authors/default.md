@@ -8,6 +8,12 @@ linkedin: https://www.linkedin.com/in/yunho-kim-2b5449236/
 github: https://github.com/yunhokim21
 ---
 
+# Education
+
+# Work Experience
+
+# Publications
+
 I am a undergraduate student in GIST. My major is Electrical Engineering and Computer Science. I am interested in Machine Learning.
 
 I am currently working as a part-time machine learing reasearcher at VIVE Studios, and my specific field is Talking Head synthesis, but I am also interested in other fields of machine learing too.
