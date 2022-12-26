@@ -13,14 +13,6 @@ github: https://github.com/yunhokim21
 - **Generative Models**. e.g. Diffusion Models, VAEs, GANs
 - Talking Head Synthesis, Face Manipulation
 
-# Education
-
-- Gwangju Institute of Science and Technology, Gwangju, Korea
-  - B.S. in Computer Science
-  - Mar. 2021-
-- Daegu Science High School, Daegu, Korea
-  - Mar.2018 - Feb.2021
-
 # Experience
 
 - Machine Learning Engineer (VIVE STUDIOS, Seoul, Korea)
@@ -38,6 +30,14 @@ github: https://github.com/yunhokim21
   - Kihong Kim\*, **Yunho Kim**\*, Seokju Cho, Junyoung Seo, Jisu Nam, Kychul Lee, Seungryong Kim, KwangHee Lee (\* : Equal Contribution) (Under Review), ArXiv Preprint, 2022
 
   - [\[Project Page\]](https://hxngiee.github.io/DiffFace/), [\[ArXiv\]]()
+
+# Education
+
+- Gwangju Institute of Science and Technology, Gwangju, Korea
+  - B.S. in Computer Science
+  - Mar. 2021-
+- Daegu Science High School, Daegu, Korea
+  - Mar.2018 - Feb.2021
 
 # Honors
 
