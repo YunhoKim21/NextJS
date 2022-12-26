@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: '[CVPR 2023] DiffFace',
+    description: 'Diffusion-based Face Swapping with Facial Guidance',
+    imgSrc: '/static/images/diffface.png',
+    href: 'https://hxngiee.github.io/DiffFace/',
+  },
+  {
     title: 'Line segment intersection',
     description: `The following code detects all intersection of randomly generated line segments, in O(nlogn) time complexity.`,
     imgSrc: '/static/images/intersect.png',
