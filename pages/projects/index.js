@@ -13,12 +13,25 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
+            Have a look at my works
           </p>
         </div>
         <div className="container py-12">
+          <p className="p-10 text-3xl font-bold">Academic Projects</p>
           <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
+            {projectsData['academic_projects'].map((d) => (
+              <Card
+                key={d.title}
+                title={d.title}
+                description={d.description}
+                imgSrc={d.imgSrc}
+                href={d.href}
+              />
+            ))}
+          </div>
+          <p className="p-10 text-3xl font-bold">Toy Projects</p>
+          <div className="-m-4 flex flex-wrap">
+            {projectsData['toy_projects'].map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
