@@ -21,7 +21,7 @@ github: https://github.com/yunhokim21
 
 - Undergraduate Intern (GIST CILAB, Gwangju, Korea)
   - Sep.2021 - Jan.2022
-  - Advisor : Prof. Kim,Kyung-Joong
+  - Advisor : Prof. Kim Kyung-Joong
 
 # Publications
 
@@ -29,7 +29,7 @@ github: https://github.com/yunhokim21
 
   - Kihong Kim\*, **Yunho Kim**\*, Seokju Cho, Junyoung Seo, Jisu Nam, Kychul Lee, Seungryong Kim, KwangHee Lee (\* : Equal Contribution) (Under Review), ArXiv Preprint, 2022
 
-  - [\[Project Page\]](https://hxngiee.github.io/DiffFace/), [\[ArXiv\]]()
+  - [\[Project Page\]](https://hxngiee.github.io/DiffFace/), [\[ArXiv\]](https://arxiv.org/abs/2212.13344) [\[Code (coming soon)\]](https://github.com/hxngiee/DiffFace)
 
 # Education
 
@@ -52,9 +52,9 @@ github: https://github.com/yunhokim21
 # Skills
 
 - Languages
-  - Korean(native)
+  - Korean : native
   - English : Scored 915 on TOEIC
 - ML/DL
-  - Pytorch, Numpy
+  - **PyTorch**, Numpy
 - Programming Languages
   - **python**, JavaScript
