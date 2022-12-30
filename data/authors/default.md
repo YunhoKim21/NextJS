@@ -34,7 +34,7 @@ github: https://github.com/yunhokim21
 # Education
 
 - Gwangju Institute of Science and Technology, Gwangju, Korea
-  - B.S. in Computer Science
+  - B.S. in Computer Science (4.24/4.5)
   - Mar. 2021-
 - Daegu Science High School, Daegu, Korea
   - Mar.2018 - Feb.2021
