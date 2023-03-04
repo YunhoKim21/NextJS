@@ -1,7 +1,7 @@
 const projectsData = {
   academic_projects: [
     {
-      title: '[CVPR 2023] DiffFace',
+      title: 'DiffFace',
       description: 'Diffusion-based Face Swapping with Facial Guidance',
       imgSrc: '/static/images/diffface.png',
       href: 'https://hxngiee.github.io/DiffFace/',

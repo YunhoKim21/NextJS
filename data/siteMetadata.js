@@ -14,7 +14,7 @@ const siteMetadata = {
   github: 'https://github.com/yunhokim21',
   facebook: 'https://facebook.com/yunho',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/yunho-kim-2b5449236/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
