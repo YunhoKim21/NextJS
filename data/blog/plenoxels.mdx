@@ -1,0 +1,26 @@
+---
+title: '[논문리뷰] : Plenoxels: Radiance Fields without Neural Networks'
+date: '2023-3-4'
+tags: ['nerf', 'plenoxels', 'plenoctree']
+draft: false
+summary: ''
+---
+
+# 요약
+
+이 논문에서는 Plenoxels (plenoptic voxels)을 소개한다. 이 논문에서는 3D를 spherical harmonics의 grid로 나타낸다. 기존 nerf와 다르게 neural component가 단 한개도 없고 spherical coeficient를 직접적으로 optimize 한다.
+
+# Voxel Grid with Spherical Harmonics
+
+기존의 nerf에서는 3D를 mlp로 나타내었다. 위치와 방향을 mlp에 입력하면 그 위치와 view direction에 맞는 color 와 opacity가 출력되었는데, 이 과정에서 ray를 sampling 할 때마다 mlp를 통과해야 했기 때문에 training/inferece 시 많은 시간이 소요되었다.
+이 논문에서는 색을 구하기 위해 점에서 mlp를 통과하는 대신, 점에 미리 저장된 spherical harmonics coeficients 를 불러오고 이를 spherical harmonics에 weighted sum을 통해 색을 구한다.
+
+![image](/static/images/plenoxel-overview.png)
+
+## What are spherical harmonics?
+
+Spherical harmonics는 구면 좌표계에서 laplace 방정식의 정규 직교 기저이다. 말이 어려운데, 수학적으로 깊게 이해할 필요는 없고, 우선 아래 그림을 보자 (speherical harmoncs의 첫 16개의 해를 나타낸 것이다.)
+
+![image](/static/images/Spherical_Harmonics.png)
+
+보면 우선 3D 상에 파란색과 노란색 두 종류의 색이 있는데, 각각이 양수와 음수를 나타내는 것이다. 우리가 직교 좌표계에서 임의의 함수를 fourier basis의 선형 합으로 나타내는 것과 비슷하게, 구면 좌표계에서 임의의 함수 f(r, \theta, \phi)를 spherical basis의 선형 합으로 나타낼 수 있는 것이고, 이 논문에서는 이 방법으로 non lambartial effect를 표현한다.
