@@ -42,6 +42,7 @@ github: https://github.com/yunhokim21
 # Honors
 
 - Scholarships(GIST) : Academic Merit Scholarship (2021), Government Sponsorship(2021-2022)
+- National Science & Technology Scholorship (4,120,000 KRW/2years)
 - Bronze Prize in 40th University Students Contest of Mathematics (2021).
 
 # Extracurricular
