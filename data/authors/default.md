@@ -15,9 +15,12 @@ github: https://github.com/yunhokim21
 
 # Experience
 
+- Undergraduate Intern (GIST ViRL, Gwangju, Korea)
+  - Jun .2023 - 
+  
 - Machine Learning Engineer (VIVE STUDIOS, Seoul, Korea)
 
-  - Apr.2022 -
+  - Apr.2022 - May .2023
 
 - Undergraduate Intern (GIST CILAB, Gwangju, Korea)
   - Sep.2021 - Jan.2022
