@@ -15,9 +15,14 @@ github: https://github.com/yunhokim21
 
 # Experience
 
+- Undergraduate Intern (GIST ViRL, Gwangju, Korea)
+
+  - July.2023 -
+  - Advisor : Prof. Jeany Son
+
 - Machine Learning Engineer (VIVE STUDIOS, Seoul, Korea)
 
-  - Apr.2022 -
+  - Apr.2022 - June.2023
 
 - Undergraduate Intern (GIST CILAB, Gwangju, Korea)
   - Sep.2021 - Jan.2022
