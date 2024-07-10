@@ -1,6 +1,6 @@
 ---
 name: Yunho Kim
-avatar: /static/images/profile3.jpeg
+avatar: /static/images/profile4.jpeg
 occupation: Undergraduate
 company: Gwangju Institute of Science and Technology
 email: youknowyunho@gm.gist.ac.kr
@@ -17,15 +17,15 @@ github: https://github.com/yunhokim21
 
 - Undergraduate Intern (GIST ViRL, Gwangju, Korea)
 
-  - Jun .2023 -
+  - Jun. 2023 -
   - Advisor : Prof. Jeany Son
 
 - Machine Learning Engineer (VIVE STUDIOS, Seoul, Korea)
 
-  - Apr.2022 - May .2023
+  - Apr. 2022 - May. 2023
 
 - Undergraduate Intern (GIST CILAB, Gwangju, Korea)
-  - Sep.2021 - Jan.2022
+  - Sep. 2021 - Jan. 2022
   - Advisor : Prof. Kim Kyung-Joong
 
 # Publications
@@ -63,7 +63,7 @@ github: https://github.com/yunhokim21
 
 - Languages
   - Korean : native
-  - English : Scored 915 on TOEIC
+  - English : TOEIC (915), TEPS (456)
 - ML/DL
   - **PyTorch**, Numpy
 - Programming Languages
