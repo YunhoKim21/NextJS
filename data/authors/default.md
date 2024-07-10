@@ -1,6 +1,6 @@
 ---
 name: Yunho Kim
-avatar: /static/images/profile4.jpeg
+avatar: /public/static/images/profile4.jpeg
 occupation: Undergraduate
 company: Gwangju Institute of Science and Technology
 email: youknowyunho@gm.gist.ac.kr
