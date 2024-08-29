@@ -38,7 +38,9 @@ github: https://github.com/yunhokim21
 
 - A Simple Baseline with Single-encoder for Referring Image Segmentation
 
-  - Under Review
+  - Seonghoon Yu, Ilchae Jung, Byeongju Han, Taeoh Kim, **Yunho Kim**, Dongyoon Wee, and Jeany Son
+
+  - [\[ArXiv\]](https://arxiv.org/pdf/2408.15521)
 
 # Education
 
