@@ -15,9 +15,14 @@ github: https://github.com/yunhokim21
 
 # Experience
 
+- Machine learning Researcher (KAIST KCVL, Daejeon, Korea)
+
+  - Mar. 2025
+  - Advisor : Prof. Tae-Kyun Kim
+
 - Undergraduate Intern (GIST ViRL, Gwangju, Korea)
 
-  - Jun. 2023 -
+  - Jun. 2023 - Dec. 2024
   - Advisor : Prof. Jeany Son
 
 - Machine Learning Engineer (VIVE STUDIOS, Seoul, Korea)
@@ -43,6 +48,11 @@ github: https://github.com/yunhokim21
   - [\[ArXiv\]](https://arxiv.org/pdf/2408.15521)
 
 # Education
+
+- Korea Institute of Science and Technology, Daejeon, Korea
+
+  - M.S. in Computer Science
+    - Mar. 2025-
 
 - Gwangju Institute of Science and Technology, Gwangju, Korea
   - B.S. in Computer Science (4.17/4.5)
